@@ -1,6 +1,6 @@
 print "create a character! you have points to assign to strength, health, intelligents, and dexterity."
 name=raw_input("what's your character's name? ")
-points=30
+points=45
 attributes=("health", "strength", "intelligents", "dexterity")
 strength=0
 health=0
