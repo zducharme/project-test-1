@@ -1,10 +1,10 @@
-print "create a character! you have points to assign to strength, health, wisdom, and dexterity."
+print "create a character! you have points to assign to strength, health, intellegents, and dexterity."
 name=raw_input("what's your character's name? ")
 points=30
-attributes=("health", "strength", "wisdom", "dexterity")
+attributes=("health", "strength", "intellegents", "dexterity")
 strength=0
 health=0
-wisdom=0
+intellegents=0
 dexterity=0
 while True:
     print
@@ -18,7 +18,7 @@ while True:
     """
     choice=raw_input("choice: ")
     if choice=="1":
-        attribute=raw_input("which attribute? strength, health, wisdom, or dexterity? ")
+        attribute=raw_input("which attribute? strength, health, intellegents, or dexterity? ")
         if attribute in attributes:
             add=int(raw_input("how many points? "))
             if add<=points and add>0:
@@ -30,7 +30,7 @@ while True:
                     print name, "now has", health, "health points."
                 elif attribute=="wisdom":
                     wisdom+=add
-                    print name, "now has", wisdom, "wisdom points."
+                    print name, "now has", intellegents, "intellegents points."
                 elif attribute=="dexterity":
                     dexterity+=add
                     print name, "now has", dexterity, "dexterity points."
@@ -40,7 +40,7 @@ while True:
         else:
             print "invalid attribute."
     elif choice=="2":
-        attribute=raw_input("which attribute? strength, health, wisdom, or dexterity? ")
+        attribute=raw_input("which attribute? strength, health, intellegents, or dexterity? ")
         if attribute in attributes:
             take=int(raw_input("how many points? "))
             if attribute=="strength" and take<=strength and take>0:
@@ -51,9 +51,9 @@ while True:
                 health-=take
                 print name, "now has", health, "health points."
                 points+=take
-            elif attribute=="wisdom" and take<=wisdom and take>0:
+            elif attribute=="intellegents" and take<=intellegents and take>0:
                 wisdom-=take
-                print name, "now has", wisdom, "wisdom points."
+                print name, "now has", intellegents, "intellegents points."
                 points+=take
             elif attribute=="dexterity" and take<=dexterity and take>0:
                 dexterity-=take
@@ -66,7 +66,7 @@ while True:
     elif choice=="3":
         print "strength -", strength
         print "health -", health
-        print "wisdom -", wisdom
+        print "intellegents -", intellegents
         print "dexterity -", dexterity
     elif choice=="4":
         if points==0:
@@ -76,4 +76,4 @@ while True:
     else:
         print "invalid choice."
 print "congrats! you're done designing "+name+'.'
-print name, "has", strength, "strength points,", health, "health points,", wisdom, "wisdom points, and", dexterity, "dexterity points."
+print name, "has", strength, "strength points,", health, "health points,", intellegents, "intellegents points, and", dexterity, "dexterity points."
